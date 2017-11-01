@@ -6,7 +6,7 @@ $(document).ready(function() {
 });
 
 
-//filter dropdown
+//filter dropdown created with help from https://www.w3schools.com/howto/howto_js_dropdown.asp
 //toggles button on user click
 function myFunction() {
     document.getElementById("show-filter").classList.toggle("show");
