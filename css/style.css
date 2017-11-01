@@ -378,3 +378,10 @@ html, body {
 .cooking-section h3 {
     padding-left: 30px;
 }
+
+/* ---------------------------------- NO DEAD END PAGE ---------------------------------- */
+.no-dead-end {
+    color: black;
+    font-size: 100px;
+    margin-left: 30px;
+}
