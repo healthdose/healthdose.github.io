@@ -45,7 +45,7 @@
               <a id="landing-pic" href="#profile-page"><img src="img/profilepic.png"></a>
             </div>
 
-            <h1>Welcome, NAME</h1>
+            <h1 id="welcome-text">Welcome, NAME</h1>
 
             <h3><a href="#browse-recipes">Start browsing <i class="fa fa-angle-double-right"></i></a></h3>
           </div>
@@ -130,23 +130,39 @@
         <div class="profile-header">
           <a id="profile-header-pic" href="#profile-page"><img src="img/profilepic.png"></a>
         </div>
-
+        
         <div class="profile-content">
           <div class="profile-about">
-            <h2>First Last</h2>
-            <h4>Gender | Age</h4>
+            <h2 id="profile-name">First Last</h2>
+            <h4 id="profile-gender-age">Gender | Age</h4>
           </div>
-
+          
+          <!-- Form for user to enter information -->
+          <div class="profile-form">
+            <Form>
+              <input id="name-textField" type="text" placeholder="Name">
+              <select id="gender-dropdown">
+                <option value="M">M</option>
+                <option value="F">F</option>
+                <option value="Other">Other</option>
+              </select>
+              <input id="age-textField" type="number" placeholder="Age">
+              <input id="height-textField" type="number" placeholder="Height">
+              <input id="weight-textField" type="number" placeholder="Weight">
+              <input id="allergy-textField" type="text" placeholder="Food Allergy ex: Egg, Milk...">
+              <input id="health-concern-textField" type="text" placeholder="Health Concern ex: Diabetes, Heart disease...">
+              <input id="form-submit-button" type="button" value="Submit">
+            </Form>
+          </div>
+          <!-- Edited -->
           <div class="profile-info-container">
             <h3>Profile Details</h3>
 
-            <h5>Name:</h5> <br>
-            <h5>Status:</h5> <br>
-            <h5>Height:</h5> <br>
-            <h5>Weight:</h5> <br>
-            <h5>Weight:</h5> <br>
-            <h5>Food Allergy:</h5> <br>
-            <h5>Current Health Concern(s):</h5>
+            <h5>Name:</h5> <h5 id="detail-name"></h5> <br>
+            <h5>Height:</h5> <h5 id="detail-height"></h5> <br>
+            <h5>Weight:</h5> <h5 id="detail-weight"></h5> <br>
+            <h5>Food Allergy:</h5> <h5 id="detail-allergy"></h5> <br>
+            <h5>Current Health Concern(s):</h5> <h5 id="detail-health-concern"></h5>
           </div>
         </div>
       </div>
