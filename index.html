@@ -1,71 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="Main page of the app"> 
-    <meta name="author" content="Henry Zhou, Sunyue Lin">       
-    <title>Webpage Prototype</title>
-    <link href="css/style.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-            
-      <div class="profile">
-        <a id="profile-pic" href="placeholder.html"><img src="img/profilepic.png"></a>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="New UI design for our web app with less html pages">
+        <meta name="author" content="Henry Zhou and Sunyue Lin">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- http://jquerymobile.com/download/ -->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+
+        <title>Breakfast for aging-related health issues</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+      <!-- http://demos.jquerymobile.com/1.4.0/pages/ -->
+      <!-- Login Page -->
+      <div data-role="page" id="login-page">
+        <div role="main" class="ui-content">
+          <div class="login-container">
+            <div class="brand-logo">
+              <h1></h1> <!-- app name -->
+            </div>
+
+            <div class="login-input">
+              <form>
+                Username: <input type="text" name="user"> <br>
+                Password: <input type="password" name="pass">
+              </form>
+
+              <a href="#landing-page" class="ui-btn ui-corner-all login-btn">LOG IN</a>
+            </div>
+
+          </div>
+        </div>
       </div>
-            
-      <ul>
-        <li><a href="placeholder.html">Home</a></li>
-        <li><a href="placeholder.html">Your Profile</a></li>
-        <li><a href="placeholder.html">Settings</a></li>
 
-        <li id="logout-btn"><a href="placeholder.html">Logout</a></li>
-      </ul>
-            
-      <div class="sidebar-btn">
-        <span class="btn"></span>
-        <span class="btn"></span>
-        <span class="btn"></span>
+      <!-- Landing Page -->
+      <div data-role="page" id="landing-page">
+        <div role="main" class="ui-content">
+          <div class="welcome-container">
+            <div class="landing-pic-container">
+              <a id="landing-pic" href="#profile-page"><img src="img/profilepic.png"></a>
+            </div>
+
+            <h1>Welcome, NAME</h1>
+
+            <h3><a href="#browse-recipes">Start browsing <i class="fa fa-angle-double-right"></i></a></h3>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Welcome Section -->
-    <div class="welcome">
-        <h1>Hello NAME,</h1>
-        <h2>Your recommended <a id="recipe-rec" href="index3.html">RECIPES</a> for today.</h2>
-    </div>
+      <!-- Browse For Recipes Or Health Risks Page -->
+      <div data-role="page" id="browse-recipes">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            
+          <div class="profile">
+            <a id="profile-pic" href="#"><img src="img/profilepic.png"></a>
+          </div>
+            
+          <ul>
+            <li><a href="#landing-page"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#profile-page"><i class="fa fa-user"></i> Your Profile</a></li>
+            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
 
-    <!-- Search Bar (Used search bar found on codepen https://codepen.io/huange/pen/rbqsD) -->
-    <div class="search-bar">
-      <input type="text" class="search-input" placeholder="Search for recipes or health concerns">
-      <form action="placeholder.html">
-      <button type="submit" class="search-btn">
-      </form>
-        <i class="fa fa-search"></i>
-      </button>
-    </div>
+            <li id="logout-btn"><a href="#login-page"><i class="fa fa-sign-out"></i> Logout</a></li>
+          </ul>
+            
+          <div class="sidebar-btn">
+            <span class="btn"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+          </div>
+        </div>
 
-    <!-- Top Health Concerns -->
-    <div class="top-health">
-      <h2>Top 3 Health Concerns</h2>
+        <div class="browsing-header">
+          <h1>Browse for Recipes</h1>
+        </div>  
+        
+        <div role="main" class="ui-content">
+          <!-- Search Bar (http://demos.jquerymobile.com/1.2.1/docs/forms/search/)
+          <div class="search-bar">
+            <input type="search" name="search" id="search-recipe" value="" placeholder="Search for recipes or health risks"/>
+          </div> -->
 
-      <div class="top-concern-btn">
-        <form action="diabetes.html"> 
-          <button type="submit">Diabetes</button>
-        </form> 
-        <form action="highbloodpressure.html">
-          <button type="submit">High Blood Pressure</button>
-        </form>
-        <form action="heartdisease.html">
-          <button type="submit">Heart Disease</button>
-        </form>
+          <!-- Recommended Recipes Popup UI (http://api.jquerymobile.com/popup/) -->
+          <div class="recommended-btn">
+            <a href="#recommended-popup" class="ui-btn ui-corner-all ui-shadow rec-text" data-rel="popup">Your recommended recipes for today</a>
+
+            <div data-role="popup" id="recommended-popup" class="recommended-items">
+              <!-- https://demos.jquerymobile.com/1.2.0/docs/pages/popup/ -->
+              <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
+              
+              <div class="recommended-items-inner">
+                <a href="#recommended-recipe-one"><img src="img/bso.png"/></a>
+                <a href="#recommended-recipe-two"><img src="img/hbf.png"/></a>
+                <a href="#recommended-recipe-three"><img src="img/csp.png"/></a>
+                <a href="#recommended-recipe-four"><img src="img/gyp.png"/></a>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="or-text">━OR━</h3>
+
+          <div class="health-risk-container">
+            <!-- http://demos.jquerymobile.com/1.4.2/selectmenu-custom/ -->
+            <select name="select-custom-21" id="select-custom-21" data-native-menu="false" onchange="location = this.value;">
+              <option value="choose" data-placeholder="true">Choose a health risk for related recipes:</option>
+              <option value="#landing-page">Diabetes</option>
+              <option value="highbloodpressure">High Blood Pressure</option>
+              <option value="heartdisease">Heart Disease</option>
+              <option value="#landing-page">Osteoporosis</option>
+              <option value="#landing-page">Alzheimer's Disease</option>
+            </select>
+          </div>
+        </div>
+    
       </div>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+      <!-- Profile Page -->
+      <div data-role="page" id="profile-page">  
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            
+          <div class="profile">
+            <a id="profile-pic" href="#"><img src="img/profilepic.png"></a>
+          </div>
+            
+          <ul>
+            <li><a href="#landing-page"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#profile-page"><i class="fa fa-user"></i> Your Profile</a></li>
+            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
 
-  </body>
+            <li id="logout-btn"><a href="#login-page"><i class="fa fa-sign-out"></i> Logout</a></li>
+          </ul>
+            
+          <div class="sidebar-btn">
+            <span class="btn"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+          </div>
+        </div>
+
+
+        <div class="profile-header">
+          <a id="profile-header-pic" href="#profile-page"><img src="img/profilepic.png"></a>
+        </div>
+
+        <div class="profile-content">
+          <div class="profile-about">
+            <h2>First Last</h2>
+            <h4>Gender | Age</h4>
+          </div>
+
+          <div class="profile-info-container">
+            <h3>Profile Details</h3>
+
+            <h5>Name:</h5>
+            <h5>Status:</h5>
+            <h5>Height:</h5>
+            <h5>Weight:</h5>
+            <h5>Weight:</h5>
+            <h5>Food Allergy:</h5>
+            <h5>Current Health Concern(s):</h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recommended Recipes Page -->
+      <!-- Recipe One -->
+      <div data-role="page" id="recommended-recipe-one">
+        <div class="browsing-header">
+          <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        </div>  
+
+        <div role="main" class="ui-content">
+          <div class="recommended-header">
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Two -->
+      <div data-role="page" id="recommended-recipe-two">
+        <div class="browsing-header">
+          <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        </div>  
+  
+        <div role="main" class="ui-content">
+  
+        </div>
+      </div>
+
+      <!-- Recipe Three -->
+      <div data-role="page" id="recommended-recipe-three">
+        <div class="browsing-header">
+          <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        </div>  
+    
+        <div role="main" class="ui-content">
+    
+        </div>
+      </div>
+
+      <!-- Recipe Four -->
+      <div data-role="page" id="recommended-recipe-four">
+        <div class="browsing-header">
+          <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        </div>  
+    
+        <div role="main" class="ui-content">
+    
+        </div>
+      </div>
+
+      <!-- http://jquerymobile.com/download/ -->
+      <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script src="js/main.js"></script>
+
+    </body>
 </html>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:900');
+
 html, body {
     height: 100%;
     width: 100%;
@@ -5,10 +7,9 @@ html, body {
     padding: 0;
 }
 
-/* ------------------------------------- MAIN PAGE (index.html) ------------------------------------- */
 /* Sidebar Navigation */
 .sidebar {
-    background: rgb(185, 178, 178);
+    background: rgba(255, 255, 255, 1); /* rgba(185, 178, 178) */
     width: 500px;
     height: 100%;
     display: block;
@@ -16,6 +17,7 @@ html, body {
     top: 0px;
     left: -500px;
     transition: left 0.3s linear;
+    z-index: 100;
 }
 
 .sidebar.visible {
@@ -54,7 +56,7 @@ html, body {
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #000;
+    color: #000 !important;
     font-size: 25px;
     border-bottom: 1px solid #8D929B;
     display: block;
@@ -91,297 +93,260 @@ html, body {
     display: block;
 }
 
-/* Welcome Section */
-.welcome {
+/* ------------------------------------- PROFILE PAGE ------------------------------------- */
+.profile-header {
+    padding: 50px 0 20px 0;
+}
+
+#profile-header-pic img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-about {
     text-align: center;
-    margin-top: 50px;
-    line-height: 25px;
+    line-height: 8px;
+    color: #707275;
 }
 
-.welcome h1 {
-    font-size: 50px;
-}
-
-.welcome h2 {
-    font-size: 35px;
-}
-
-#recipe-rec {
-    color: #2969d1;
-}
-
-#recipe-rec:hover {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* Search Bar from https://codepen.io/huange/pen/rbqsD */
-.search-bar {
-    width: 68%;
+.profile-info-container {
+    width: 95%;
     margin: auto;
-    margin-top: 50px;
 }
-  
-.search-input {
-    float: left;
-    width: 100%;
-    border: 3px solid #000;
-    padding: 5px;
-    height: 50px;
-    border-radius: 5px;
-    outline: none;
-    color: #9DBFAF;
-    font-size: 20px;
+
+.profile-info-container h5{
+    margin-left: 10px;
 }
-  
-.search-input:focus{
-    color: #000;
+
+/* ------------------------------------- LOGIN PAGE ------------------------------------- */
+.login-container {
+    width: 350px;
+    height: 500px;
+    margin: auto;
+    padding-top: 30px;
+    margin-top: 20px;
 }
-  
-.search-btn {
-    position: absolute;  
-    width: 50px;
-    height: 65px;
-    border: 1px solid #000;
-    background: #000;
+
+.brand-logo {
+    width: 90%;
+    margin: auto;
+    height: 100px;
+}
+
+.brand-logo h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;    
+}
+
+.login-input {
+    margin-top: 30px;
+    padding: 50px 15px 0px 15px;
+    border: 1px solid #c0c5ce;
+    box-shadow: 2px 2px 5px #c3c7cc;
+}
+
+.login-btn {
+    margin: 20px 0px 50px 0px;
+}
+
+/* ------------------------------------- LANDING PAGE ------------------------------------- */
+#landing-page {
+    background: url("https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Welcome Container */
+.welcome-container {
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+
+.landing-pic-container {
+    padding-top: 40px;
+}
+
+#landing-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.welcome-container h1 {
     text-align: center;
     color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-}
-
-/* Top Health Concerns */
-.top-health {
-    display: inline-block;
-    margin-top: 25px;
-    width: 100%;
-    margin-bottom: 25px;
-}
-
-.top-health h2 {
-    padding-left: 200px;
-}
-
-.top-concern-btn {
-    margin-left: 190px;
-}
-
-.top-concern-btn button{
-    display: block;
-    width: 87%;
-    height: 100px;
-    margin-top: 25px;
     font-size: 40px;
-    border: 1px solid #000;
-    background-color: #e1e4e8;
 }
 
-.top-concern-btn button:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
+.welcome-container h3 {
+    text-align: center;
+    margin-top: 100px;
+    padding: 30px;
 }
 
+.welcome-container h3 a {
+    color: #fff !important;
+    text-decoration: none;
+}
 
-/* -------------- HEALTH CONCERNS RECIPE PAGES (diabetes/highbloodpressure/heartdisease.html) ---------------- */
-/* Health Concerns Page Navigation */
-.page2-header {
+/* ------------------------------------- BROWSING PAGE ------------------------------------- */
+/* Browsing page navigation */
+#browse-recipes {
+    background: url("https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.browsing-header {
     width: 100%;
     height: 80px;
-    border-bottom: 2px solid #000;
-    min-width: 600px;
 }
 
 .back-btn {
-    font-size: 70px;
+    font-size: 60px;
     margin-left: 30px;
-    color: rgba(97, 83, 83, 0.9);
+    color: rgba(97, 83, 83, 0.9) !important;
 }
 
-.page2-title {
+.browsing-header h1 {
     text-align: center;
-    margin-top: -60px;
-    font-size: 40px;
-}
-
-/* Health Concerns Recipes Button */
-.health-section-recipe {
-    display: inline-block;
-    margin-top: 25px;
-    width: 100%;
-    margin-bottom: 25px;
-}
-
-.health-section-recipe a {
-    text-decoration: none;
-    color: #000;
-}
-
-/* Filter Button created with help from https://www.w3schools.com/howto/howto_js_dropdown.asp */
-.filterbtn {
-    background-color: #fff;
-    color: #000;
-    padding: 16px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-.filterbtn:hover, .filterbtn:focus {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.filter-dropdown {
-    position: relative;
-    display: inline-block;
-    float: right;
-    top: -25px;
-    right: 140px;
-}
-
-.filter-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 10;
-    right: 0;
-    width: 200px;
-}
-
-.filter-content h4 {
-    text-align: center;
-    border-bottom: 2px solid #000;
-    margin: 10px;
-}
-
-.filter-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.filter-content a:hover {
-    background-color: #f1f1f1
-}
-
-.show {
-    display: block;
-}
-
-.health-recipe-btn {
-    margin-left: 190px;
-    top: 50px;
-}
-
-.health-recipe-btn button{
-    display: block;
-    width: 87%;
-    height: 100px;
-    margin-top: 25px;
-    font-size: 40px;
-    border: 1px solid #000;
-    background-color: #e1e4e8;
-}
-
-.health-recipe-btn button:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* ----------------------------- RECOMMENDED/SEARCHED RECIPES PAGE (index3.html) ----------------------------- */
-
-
-
-/* ---------------------------------- RECIPE INSTRUCTION PAGE (index4.html) ---------------------------------- */
-/* Instructions navigation */
-.instructions-header {
-    width: 100%;
-    height: 80px;
-    border-bottom: 2px solid #000;
-    min-width: 600px;
-}
-
-.close-btn {
+    padding-top: 40px;
     font-size: 50px;
-    margin-left: 30px;
-    color: rgba(97, 83, 83, 0.9);
 }
 
-.instructions-title {
-    text-align: center;
-    margin-top: -40px;
-    font-size: 40px;
-}
-
-/* Recipe Title Section */
-.recipes-title {
-    border: 1px solid #000;
-    width: 900px;
-    position: relative;
+/* Search bar 
+.search-bar {
+    width: 68%;
     margin: auto;
-    top: 30px;
+    padding-top: 70px;
+} */
+
+/* Recommended recipes popup (http://demos.jquerymobile.com/1.4.4/button-markup/)*/
+.recommended-btn {
+    margin: 0 auto !important;
+    width: 50%;
+    padding-top: 80px;
 }
 
-.recipes-title h1, h5 {
-    display: inline-block;
-}
-
-.recipes-title h1 {
-    margin-left: 360px;
-}
-
-.recipes-title h5 {
-    float: right;
-}
-
-/* Nutrition Facts Section */
-.nutri-facts {
-    border: 1px solid #000;
-    width: 900px;
-    position: relative;
-    margin: auto;
-    top: 60px;
-    height: 150px;
-}
-
-.nutri-facts h3 {
-    padding-left: 20px;
-}
-
-/* Ingredients Section */
-.ingredients-section {
-    border: 1px solid #000;
-    width: 900px;
-    position: relative;
-    margin: auto;
-    top: 90px;
-    height: 200px;
-}
-
-.ingredients-section h3 {
-    padding-left: 30px;
-}
-
-/* Cooking Instructions Section */
-.cooking-section {
-    border: 1px solid #000;
-    width: 900px;
-    position: relative;
-    margin: auto;
-    top: 120px;
+.recommended-items {
+    width: 750px;
     height: 500px;
+    margin: auto;
 }
 
-.cooking-section h3 {
-    padding-left: 30px;
+.recommended-items a {
+    text-decoration: none;
 }
 
-/* ---------------------------------- NO DEAD END PAGE ---------------------------------- */
-.no-dead-end {
-    color: black;
-    font-size: 100px;
-    margin-left: 30px;
+.recommended-items-inner {
+    width: 100%;
+    height: 100%;
+    /*overflow: auto;*/
+}
+
+.recommended-items-inner a img {
+    width: 45%;
+    height: 45%;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 23px;
+}
+
+.or-text {
+    text-align: center;
+    padding: 50px 0 50px 0;
+}
+
+/* Health Risk Dropdown Selection menu */
+.health-risk-container {
+    width: 50%;
+    margin: auto;
+}
+
+/* ------------------------------------- RECOMMENDED RECIPES PAGE ------------------------------------- */
+/* Recommended Recipes  */
+
+
+
+
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    /* Login Page */
+    .login-container {
+        width: 90%;
+    }
+
+    /* Browsing Page */
+    .browsing-header h1 {
+        font-size: 35px;
+    }
+
+    .recommended-btn {
+        width: 90%;
+    }
+
+    .health-risk-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 560px) {
+    /* Sidebar Navigation */
+    .sidebar {
+        width: 80%;
+        left: -80%;
+    }
+
+    .sidebar ul li a {
+        width: auto;
+    }
+
+    /* Welcome Section */
+    .welcome-container {
+        width: 95%;
+        height: auto;
+    }
+
+    .welcome-container h1 {
+        font-size: 35px;
+    }
+
+    .welcome-container h3 {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 800px) {
+    /* Recommended Recipes Section */
+    .recommended-items {
+        width: 100%;
+        height: 470px;
+        margin-top: 10px;
+    }
+
+    .recommended-items-inner {
+        overflow: scroll;
+    }
+    
+    .recommended-items-inner a img {
+        display: block;
+        margin: auto;
+        width: 300px;
+        height: 200px;
+        margin-top: 15px;
+        padding-bottom: 20px;
+    }
 }
