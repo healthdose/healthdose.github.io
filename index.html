@@ -58,13 +58,13 @@
         <div class="sidebar">
             
           <div class="profile">
-            <a id="profile-pic" href="#"><img src="img/profilepic.png"></a>
+            <a id="profile-pic" href="#profile-page"><img src="img/profilepic.png"></a>
           </div>
             
           <ul>
             <li><a href="#landing-page"><i class="fa fa-home"></i> Home</a></li>
             <li><a href="#profile-page"><i class="fa fa-user"></i> Your Profile</a></li>
-            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+            <li><a href="#settings-page"><i class="fa fa-gear"></i> Settings</a></li>
 
             <li id="logout-btn"><a href="#login-page"><i class="fa fa-sign-out"></i> Logout</a></li>
           </ul>
@@ -109,11 +109,11 @@
             <!-- http://demos.jquerymobile.com/1.4.2/selectmenu-custom/ -->
             <select name="select-custom-21" id="select-custom-21" data-native-menu="false" onchange="location = this.value;">
               <option value="choose" data-placeholder="true">Choose a health risk for related recipes:</option>
-              <option value="#landing-page">Diabetes</option>
-              <option value="highbloodpressure">High Blood Pressure</option>
-              <option value="heartdisease">Heart Disease</option>
-              <option value="#landing-page">Osteoporosis</option>
-              <option value="#landing-page">Alzheimer's Disease</option>
+              <option value="#health-risk-page">Diabetes</option>
+              <option value="#health-risk-page">High Blood Pressure</option>
+              <option value="#health-risk-page">Heart Disease</option>
+              <option value="#health-risk-page">Osteoporosis</option>
+              <option value="#health-risk-page">Alzheimer's Disease</option>
             </select>
           </div>
         </div>
@@ -121,29 +121,11 @@
       </div>
 
       <!-- Profile Page -->
-      <div data-role="page" id="profile-page">  
-        <!-- Sidebar Navigation -->
-        <div class="sidebar">
-            
-          <div class="profile">
-            <a id="profile-pic" href="#"><img src="img/profilepic.png"></a>
-          </div>
-            
-          <ul>
-            <li><a href="#landing-page"><i class="fa fa-home"></i> Home</a></li>
-            <li><a href="#profile-page"><i class="fa fa-user"></i> Your Profile</a></li>
-            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
-
-            <li id="logout-btn"><a href="#login-page"><i class="fa fa-sign-out"></i> Logout</a></li>
-          </ul>
-            
-          <div class="sidebar-btn">
-            <span class="btn"></span>
-            <span class="btn"></span>
-            <span class="btn"></span>
-          </div>
-        </div>
-
+      <div data-role="page" id="profile-page">
+        <div class="profile-nav">
+          <a class="profile-home-btn" href="#landing-page"><i class="fa fa-angle-left"></i> Back to Home</a>
+          <a class="profile-browse-btn" href="#browse-recipes">Continue to Browsing <i class="fa fa-angle-right"></i></a>
+        </div>  
 
         <div class="profile-header">
           <a id="profile-header-pic" href="#profile-page"><img src="img/profilepic.png"></a>
@@ -158,12 +140,12 @@
           <div class="profile-info-container">
             <h3>Profile Details</h3>
 
-            <h5>Name:</h5>
-            <h5>Status:</h5>
-            <h5>Height:</h5>
-            <h5>Weight:</h5>
-            <h5>Weight:</h5>
-            <h5>Food Allergy:</h5>
+            <h5>Name:</h5> <br>
+            <h5>Status:</h5> <br>
+            <h5>Height:</h5> <br>
+            <h5>Weight:</h5> <br>
+            <h5>Weight:</h5> <br>
+            <h5>Food Allergy:</h5> <br>
             <h5>Current Health Concern(s):</h5>
           </div>
         </div>
@@ -172,48 +154,154 @@
       <!-- Recommended Recipes Page -->
       <!-- Recipe One -->
       <div data-role="page" id="recommended-recipe-one">
-        <div class="browsing-header">
-          <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
-        </div>  
+        <!-- Intructions Page Navigation -->
+        <header class="instructions-header">
+          <a class="close-btn" href="#browse-recipes"><i class="fa fa-close"></i></a>
 
-        <div role="main" class="ui-content">
-          <div class="recommended-header">
-
+          <div class="instructions-nav">
+            <h1 class="instructions-title">Instructions</h1>
           </div>
+        </header>
+  
+        <!-- Recipes Title Section -->
+        <div class="recipes-title">
+          <h1 id="main-recipe">Recipe Title</h1>
+          <h5>Estimated <br> time: XX</h5>
+        </div>
+  
+        <!-- Nutrition Facts Section -->
+        <div class="nutri-facts">
+          <h3>Nutrition Facts:</h3>
+        </div>
+  
+        <!-- Ingredients Section -->
+        <div class="ingredients-section">
+          <h3>Ingredients:</h3>
+        </div>
+  
+        <!-- Cooking Instructions Section -->
+        <div class="cooking-section">
+          <h3>How to make:</h3>
         </div>
       </div>
 
       <!-- Recipe Two -->
       <div data-role="page" id="recommended-recipe-two">
-        <div class="browsing-header">
-          <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
-        </div>  
-  
-        <div role="main" class="ui-content">
-  
+        <!-- Intructions Page Navigation -->
+        <header class="instructions-header">
+          <a class="close-btn" href="#browse-recipes"><i class="fa fa-close"></i></a>
+
+          <div class="instructions-nav">
+            <h1 class="instructions-title">Instructions</h1>
+          </div>
+        </header>
+    
+        <!-- Recipes Title Section -->
+        <div class="recipes-title">
+          <h1 id="main-recipe">Recipe Title</h1>
+          <h5>Estimated <br> time: XX</h5>
+        </div>
+    
+        <!-- Nutrition Facts Section -->
+        <div class="nutri-facts">
+          <h3>Nutrition Facts:</h3>
+        </div>
+    
+        <!-- Ingredients Section -->
+        <div class="ingredients-section">
+          <h3>Ingredients:</h3>
+        </div>
+    
+        <!-- Cooking Instructions Section -->
+        <div class="cooking-section">
+          <h3>How to make:</h3>
         </div>
       </div>
 
       <!-- Recipe Three -->
       <div data-role="page" id="recommended-recipe-three">
-        <div class="browsing-header">
-          <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
-        </div>  
+        <!-- Intructions Page Navigation -->
+        <header class="instructions-header">
+          <a class="close-btn" href="#browse-recipes"><i class="fa fa-close"></i></a>
+
+          <div class="instructions-nav">
+            <h1 class="instructions-title">Instructions</h1>
+          </div>
+        </header>
     
-        <div role="main" class="ui-content">
+        <!-- Recipes Title Section -->
+        <div class="recipes-title">
+          <h1 id="main-recipe">Recipe Title</h1>
+          <h5>Estimated <br> time: XX</h5>
+        </div>
     
+        <!-- Nutrition Facts Section -->
+        <div class="nutri-facts">
+          <h3>Nutrition Facts:</h3>
+        </div>
+    
+        <!-- Ingredients Section -->
+        <div class="ingredients-section">
+          <h3>Ingredients:</h3>
+        </div>
+    
+        <!-- Cooking Instructions Section -->
+        <div class="cooking-section">
+          <h3>How to make:</h3>
         </div>
       </div>
 
       <!-- Recipe Four -->
       <div data-role="page" id="recommended-recipe-four">
-        <div class="browsing-header">
-          <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
-        </div>  
+        <!-- Intructions Page Navigation -->
+        <header class="instructions-header">
+          <a class="close-btn" href="#browse-recipes"><i class="fa fa-close"></i></a>
+
+          <div class="instructions-nav">
+            <h1 class="instructions-title">Instructions</h1>
+          </div>
+        </header>
     
-        <div role="main" class="ui-content">
-    
+        <!-- Recipes Title Section -->
+        <div class="recipes-title">
+          <h1 id="main-recipe">Recipe Title</h1>
+          <h5>Estimated <br> time: XX</h5>
         </div>
+    
+        <!-- Nutrition Facts Section -->
+        <div class="nutri-facts">
+          <h3>Nutrition Facts:</h3>
+        </div>
+    
+        <!-- Ingredients Section -->
+        <div class="ingredients-section">
+          <h3>Ingredients:</h3>
+        </div>
+    
+        <!-- Cooking Instructions Section -->
+        <div class="cooking-section">
+          <h3>How to make:</h3>
+        </div>
+      </div>
+
+      <!-- Health Risks Pages -->
+      <div data-role="page" id="health-risk-page">
+        <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        <div class="health-risk-title">
+          <h1>Health Title</h1>
+        </div>
+
+        <div class="health-risk-recipes">
+            <a href="#recommended-recipe-one"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-one"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-one"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-one"><img src="img/placeholder.png"/></a>
+        </div>
+      </div>
+
+      <!-- Settings Page -->
+      <div data-role="page" id="settings-page">
+
       </div>
 
       <!-- http://jquerymobile.com/download/ -->

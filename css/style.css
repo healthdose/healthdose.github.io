@@ -95,7 +95,26 @@ html, body {
 
 /* ------------------------------------- PROFILE PAGE ------------------------------------- */
 .profile-header {
-    padding: 50px 0 20px 0;
+    padding: 40px 0 20px 0;
+}
+
+.profile-nav {
+    padding: 10px 0px 10px 0px;
+}
+
+.profile-home-btn {
+    font-size: 15px;
+    margin-left: 30px;
+    color: rgba(97, 83, 83, 0.9) !important;
+    text-decoration: none;
+}
+
+.profile-browse-btn {
+    font-size: 15px;
+    color: rgba(97, 83, 83, 0.9) !important;
+    text-decoration: none;
+    float: right;
+    margin-right: 20px;
 }
 
 #profile-header-pic img{
@@ -253,7 +272,6 @@ html, body {
 .recommended-items-inner {
     width: 100%;
     height: 100%;
-    /*overflow: auto;*/
 }
 
 .recommended-items-inner a img {
@@ -277,11 +295,122 @@ html, body {
 
 /* ------------------------------------- RECOMMENDED RECIPES PAGE ------------------------------------- */
 /* Recommended Recipes  */
+/* Instructions navigation */
+#recommended-recipe-one {
+    overflow: hidden;
+}
+
+#recommended-recipe-two {
+    overflow: hidden;
+}
+
+#recommended-recipe-three {
+    overflow: hidden;
+}
+
+#recommended-recipe-four {
+    overflow: hidden;
+}
+
+.instructions-header {
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid #000;
+    min-width: 600px;
+}
+
+.close-btn {
+    font-size: 50px;
+    margin-left: 30px;
+    color: rgba(97, 83, 83, 0.9) !important;
+}
+
+.close-btn i {
+    padding-top: 15px;
+}
+
+.instructions-title {
+    text-align: center;
+    margin-top: -55px;
+    font-size: 40px;
+}
+
+/* Recipe Title Section */
+.recipes-title {
+    border: 1px solid #000;
+    width: 900px;
+    position: relative;
+    margin: auto;
+    top: 30px;
+}
+
+.recipes-title h1, h5 {
+    display: inline-block;
+}
+
+.recipes-title h1 {
+    margin-left: 360px;
+}
+
+.recipes-title h5 {
+    float: right;
+}
+
+/* Nutrition Facts Section */
+.nutri-facts {
+    border: 1px solid #000;
+    width: 900px;
+    position: relative;
+    margin: auto;
+    top: 60px;
+    height: 150px;
+}
+
+.nutri-facts h3 {
+    padding-left: 20px;
+}
+
+/* Ingredients Section */
+.ingredients-section {
+    border: 1px solid #000;
+    width: 900px;
+    position: relative;
+    margin: auto;
+    top: 90px;
+    height: 200px;
+}
+
+.ingredients-section h3 {
+    padding-left: 30px;
+}
+
+/* Cooking Instructions Section */
+.cooking-section {
+    border: 1px solid #000;
+    width: 900px;
+    position: relative;
+    margin: auto;
+    top: 120px;
+    height: 500px;
+}
+
+.cooking-section h3 {
+    padding-left: 30px;
+}
+
+/* ------------------------------------- HEALTH RISK PAGE ------------------------------------- */
+.health-risk-title h1{
+    text-align: center;
+    margin-top: -30px;
+}
+
+.health-risk-recipes a img{
+    width: 250px;
+    height: 250px;
+}
 
 
-
-
-
+/* ------------------------------------- MEDIA QUERIES ------------------------------------- */
 /* Mobile Responsive */
 @media (max-width: 480px) {
     /* Login Page */
@@ -300,6 +429,14 @@ html, body {
 
     .health-risk-container {
         width: 90%;
+    }
+
+    /* Instructions Page */
+    .instructions-title {
+        text-align: center;
+        margin-top: -40px;
+        font-size: 35px;
+        margin-left: -200px;
     }
 }
 
@@ -330,6 +467,23 @@ html, body {
 }
 
 @media (max-width: 800px) {
+    /* Profile Page */
+    .profile-home-btn {
+        font-size: 10px;
+        margin-left: 20px;
+        color: rgba(97, 83, 83, 0.9) !important;
+        text-decoration: none;
+    }
+    
+    .profile-browse-btn {
+        font-size: 10px;
+        color: rgba(97, 83, 83, 0.9) !important;
+        text-decoration: none;
+        float: right;
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+
     /* Recommended Recipes Section */
     .recommended-items {
         width: 100%;
@@ -348,5 +502,98 @@ html, body {
         height: 200px;
         margin-top: 15px;
         padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 920px) {
+    /* Instructions Page */
+    .instructions-header {
+        width: 100%;
+        height: 80px;
+        border-bottom: 2px solid #000;
+        min-width: 600px;
+    }
+
+    .close-btn-container {
+        margin-top: 100px;
+    }
+    
+    .close-btn {
+        font-size: 30px;
+        margin-left: 20px;
+        color: rgba(97, 83, 83, 0.9) !important;
+    }
+
+    .close-btn i {
+        padding-top: 25px;
+    }
+    
+    .instructions-title {
+        text-align: center;
+        margin-top: -40px;
+        font-size: 35px;
+    }
+    
+    /* Recipe Title Section */
+    .recipes-title {
+        border: 1px solid #000;
+        width: 900px;
+        position: relative;
+        margin: auto;
+        top: 30px;
+    }
+    
+    .recipes-title h1, h5 {
+        display: inline-block;
+    }
+    
+    .recipes-title h1 {
+        margin-left: 360px;
+    }
+    
+    .recipes-title h5 {
+        float: right;
+    }
+    
+    /* Nutrition Facts Section */
+    .nutri-facts {
+        border: 1px solid #000;
+        width: 900px;
+        position: relative;
+        margin: auto;
+        top: 60px;
+        height: 150px;
+    }
+    
+    .nutri-facts h3 {
+        padding-left: 20px;
+    }
+    
+    /* Ingredients Section */
+    .ingredients-section {
+        border: 1px solid #000;
+        width: 900px;
+        position: relative;
+        margin: auto;
+        top: 90px;
+        height: 200px;
+    }
+    
+    .ingredients-section h3 {
+        padding-left: 30px;
+    }
+    
+    /* Cooking Instructions Section */
+    .cooking-section {
+        border: 1px solid #000;
+        width: 900px;
+        position: relative;
+        margin: auto;
+        top: 120px;
+        height: 500px;
+    }
+    
+    .cooking-section h3 {
+        padding-left: 30px;
     }
 }
