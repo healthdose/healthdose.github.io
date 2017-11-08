@@ -109,11 +109,11 @@
             <!-- http://demos.jquerymobile.com/1.4.2/selectmenu-custom/ -->
             <select name="select-custom-21" id="select-custom-21" data-native-menu="false" onchange="location = this.value;">
               <option value="choose" data-placeholder="true">Choose a health risk for related recipes:</option>
-              <option value="#health-risk-page">Diabetes</option>
-              <option value="#health-risk-page">High Blood Pressure</option>
-              <option value="#health-risk-page">Heart Disease</option>
-              <option value="#health-risk-page">Osteoporosis</option>
-              <option value="#health-risk-page">Alzheimer's Disease</option>
+              <option value="#diabetes-page">Diabetes</option>
+              <option value="#hbp-page">High Blood Pressure</option>
+              <option value="#heart-disease-page">Heart Disease</option>
+              <option value="#osteo-page">Osteoporosis</option>
+              <option value="#ad-page">Alzheimer's Disease</option>
             </select>
           </div>
         </div>
@@ -181,7 +181,7 @@
   
         <!-- Recipes Title Section -->
         <div class="recipes-title">
-          <h1 id="main-recipe">Recipe Title</h1>
+          <h1 id="main-recipe">Banana Split Oatmeal</h1>
           <h5>Estimated <br> time: XX</h5>
         </div>
   
@@ -214,7 +214,7 @@
     
         <!-- Recipes Title Section -->
         <div class="recipes-title">
-          <h1 id="main-recipe">Recipe Title</h1>
+          <h1 id="main-recipe">Healthy Breakfast Frittata</h1>
           <h5>Estimated <br> time: XX</h5>
         </div>
     
@@ -247,7 +247,7 @@
     
         <!-- Recipes Title Section -->
         <div class="recipes-title">
-          <h1 id="main-recipe">Recipe Title</h1>
+          <h1 id="main-recipe">Crustless Spinach Pie</h1>
           <h5>Estimated <br> time: XX</h5>
         </div>
     
@@ -280,7 +280,40 @@
     
         <!-- Recipes Title Section -->
         <div class="recipes-title">
-          <h1 id="main-recipe">Recipe Title</h1>
+          <h1 id="main-recipe">Greek Yogurt Parfait</h1>
+          <h5>Estimated <br> time: XX</h5>
+        </div>
+    
+        <!-- Nutrition Facts Section -->
+        <div class="nutri-facts">
+          <h3>Nutrition Facts:</h3>
+        </div>
+    
+        <!-- Ingredients Section -->
+        <div class="ingredients-section">
+          <h3>Ingredients:</h3>
+        </div>
+    
+        <!-- Cooking Instructions Section -->
+        <div class="cooking-section">
+          <h3>How to make:</h3>
+        </div>
+      </div>
+
+      <!-- Placeholder Page -->
+      <div data-role="page" id="recommended-recipe-placeholder">
+        <!-- Intructions Page Navigation -->
+        <header class="instructions-header">
+          <a class="close-btn" href="#browse-recipes"><i class="fa fa-close"></i></a>
+
+          <div class="instructions-nav">
+            <h1 class="instructions-title">Instructions</h1>
+          </div>
+        </header>
+    
+        <!-- Recipes Title Section -->
+        <div class="recipes-title">
+          <h1 id="main-recipe">Recipe</h1>
           <h5>Estimated <br> time: XX</h5>
         </div>
     
@@ -301,17 +334,78 @@
       </div>
 
       <!-- Health Risks Pages -->
-      <div data-role="page" id="health-risk-page">
+      <!-- Diabetes -->
+      <div data-role="page" id="diabetes-page">
         <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
         <div class="health-risk-title">
-          <h1>Health Title</h1>
+          <h1>Diabetes</h1>
         </div>
 
         <div class="health-risk-recipes">
-            <a href="#recommended-recipe-one"><img src="img/placeholder.png"/></a>
-            <a href="#recommended-recipe-one"><img src="img/placeholder.png"/></a>
-            <a href="#recommended-recipe-one"><img src="img/placeholder.png"/></a>
-            <a href="#recommended-recipe-one"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+        </div>
+      </div>
+
+      <!-- High Blood Pressure -->
+      <div data-role="page" id="hbp-page">
+        <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        <div class="health-risk-title">
+          <h1>High Blood Pressure</h1>
+        </div>
+
+        <div class="health-risk-recipes">
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+        </div>
+      </div>
+
+      <!-- Heart Disease -->
+      <div data-role="page" id="heart-disease-page">
+        <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        <div class="health-risk-title">
+          <h1>Heart Disease</h1>
+        </div>
+
+        <div class="health-risk-recipes">
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+        </div>
+      </div>
+
+      <!-- Osteoporosis -->
+      <div data-role="page" id="osteo-page">
+        <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        <div class="health-risk-title">
+          <h1>Osteoporosis</h1>
+        </div>
+
+        <div class="health-risk-recipes">
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+        </div>
+      </div>
+
+      <!-- Alzheimer's Disease -->
+      <div data-role="page" id="ad-page">
+        <a class="back-btn" href="#browse-recipes"><i class="fa fa-angle-left"></i></a>
+        <div class="health-risk-title">
+          <h1>Alzheimer's Disease</h1>
+        </div>
+
+        <div class="health-risk-recipes">
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
+            <a href="#recommended-recipe-placeholder"><img src="img/placeholder.png"/></a>
         </div>
       </div>
 

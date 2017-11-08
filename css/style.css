@@ -94,6 +94,10 @@ html, body {
 }
 
 /* ------------------------------------- PROFILE PAGE ------------------------------------- */
+#profile-page {
+    overflow: hidden;
+}
+
 .profile-header {
     padding: 40px 0 20px 0;
 }
@@ -404,9 +408,16 @@ html, body {
     margin-top: -30px;
 }
 
+.health-risk-recipes {
+    width: 90%;
+    margin: auto;
+}
+
 .health-risk-recipes a img{
     width: 250px;
     height: 250px;
+    margin-left: 28px;
+    margin-top: 50px;
 }
 
 
