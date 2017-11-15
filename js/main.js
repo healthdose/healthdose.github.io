@@ -5,7 +5,7 @@ $(document).ready(function() {
     });
     
     // New
-    //Profile form subit
+    //Profile form submit
     $('#form-submit-button').click(function(e) {
         e.preventDefault();
         var entered_name = $('#name-textField').val();

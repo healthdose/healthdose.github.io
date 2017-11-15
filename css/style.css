@@ -222,9 +222,58 @@ html, body {
     text-decoration: none;
 }
 
+/* ------------------------------------- RECIPES PAGE ------------------------------------- */
+.recipe-header {
+    border-bottom: 1px solid #000;
+}
+
+.recipe-header h1{
+    text-align: center;
+}
+
+.showrecipe-container {
+    margin: auto;
+    width: 600px;
+    height: 200px;
+    border: 1px solid #c0c5ce;
+    margin-top: 10px;
+}
+
+.showrecipe-container a {
+    display: block;
+}
+
+.recipe-box-one {
+    margin-top: 20px;
+}
+
+.recipe-description a img {
+    width: 250px;
+    height: 200px;
+    float: left;
+}
+
+.recipe-description h3, p {
+    margin: 0;
+}
+
+.recipe-description h3 {
+    text-align: center;
+}
+
+.recipe-description p {
+    overflow: hidden;
+}
+
+.view-recipe {
+    text-decoration: none;
+    text-align: center;
+}
+
+
 /* ------------------------------------- BROWSING PAGE ------------------------------------- */
 /* Browsing page navigation */
-#browse-recipes {
+/* #browse-recipes {
     background: url("https://images.pexels.com/photos/349609/pexels-photo-349609.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -247,7 +296,7 @@ html, body {
     text-align: center;
     padding-top: 40px;
     font-size: 50px;
-}
+} */
 
 /* Search bar 
 .search-bar {
@@ -257,7 +306,7 @@ html, body {
 } */
 
 /* Recommended recipes popup (http://demos.jquerymobile.com/1.4.4/button-markup/)*/
-.recommended-btn {
+/*.recommended-btn {
     margin: 0 auto !important;
     width: 50%;
     padding-top: 80px;
@@ -290,12 +339,12 @@ html, body {
     text-align: center;
     padding: 50px 0 50px 0;
 }
-
-/* Health Risk Dropdown Selection menu */
+*/
+/* Health Risk Dropdown Selection menu 
 .health-risk-container {
     width: 50%;
     margin: auto;
-}
+} */
 
 /* ------------------------------------- RECOMMENDED RECIPES PAGE ------------------------------------- */
 /* Recommended Recipes  */
@@ -474,6 +523,43 @@ html, body {
 
     .welcome-container h3 {
         padding-bottom: 80px;
+    }
+
+    /* Recipes Page */
+    .showrecipe-container {
+        margin: auto;
+        width: auto;
+        height: 100px;
+        border: 1px solid #c0c5ce;
+        margin-top: 10px;
+    }
+    
+    .recipe-box-one {
+        margin-top: 20px;
+    }
+    
+    .recipe-description a img {
+        width: 150px;
+        height: 100px;
+        float: left;
+    }
+    
+    .recipe-description h3, p {
+        margin: 0;
+    }
+    
+    .recipe-description h3 {
+        font-size: 15px;
+        text-align: center;
+    }
+    
+    .recipe-description p {
+        font-size: 10px;
+        overflow: hidden;
+    }
+
+    .view-recipe {
+        font-size: 15px;
     }
 }
 

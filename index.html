@@ -45,16 +45,16 @@
               <a id="landing-pic" href="#profile-page"><img src="img/profilepic.png"></a>
             </div>
 
-            <h1 id="welcome-text">Welcome, NAME</h1>
+            <h1 id="welcome-text">Welcome, </h1>
 
-            <h3><a href="#browse-recipes">Start browsing <i class="fa fa-angle-double-right"></i></a></h3>
+            <h3><a href="#profile-page">Edit Profile</a></h3>
           </div>
         </div>
       </div>
 
-      <!-- Browse For Recipes Or Health Risks Page -->
-      <div data-role="page" id="browse-recipes">
-        <!-- Sidebar Navigation -->
+      <!-- Browse For Recipes Or Health Risks Page 
+      <div data-role="page" id="browse-recipes"> -->
+        <!-- Sidebar Navigation 
         <div class="sidebar">
             
           <div class="profile">
@@ -80,18 +80,14 @@
           <h1>Browse for Recipes</h1>
         </div>  
         
-        <div role="main" class="ui-content">
-          <!-- Search Bar (http://demos.jquerymobile.com/1.2.1/docs/forms/search/)
-          <div class="search-bar">
-            <input type="search" name="search" id="search-recipe" value="" placeholder="Search for recipes or health risks"/>
-          </div> -->
+        <div role="main" class="ui-content"> -->
 
-          <!-- Recommended Recipes Popup UI (http://api.jquerymobile.com/popup/) -->
+          <!-- Recommended Recipes Popup UI (http://api.jquerymobile.com/popup/) 
           <div class="recommended-btn">
             <a href="#recommended-popup" class="ui-btn ui-corner-all ui-shadow rec-text" data-rel="popup">Your recommended recipes for today</a>
 
-            <div data-role="popup" id="recommended-popup" class="recommended-items">
-              <!-- https://demos.jquerymobile.com/1.2.0/docs/pages/popup/ -->
+            <div data-role="popup" id="recommended-popup" class="recommended-items"> -->
+              <!-- https://demos.jquerymobile.com/1.2.0/docs/pages/popup/ 
               <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
               
               <div class="recommended-items-inner">
@@ -105,8 +101,8 @@
 
           <h3 class="or-text">━OR━</h3>
 
-          <div class="health-risk-container">
-            <!-- http://demos.jquerymobile.com/1.4.2/selectmenu-custom/ -->
+          <div class="health-risk-container"> -->
+            <!-- http://demos.jquerymobile.com/1.4.2/selectmenu-custom/ 
             <select name="select-custom-21" id="select-custom-21" data-native-menu="false" onchange="location = this.value;">
               <option value="choose" data-placeholder="true">Choose a health risk for related recipes:</option>
               <option value="#diabetes-page">Diabetes</option>
@@ -118,13 +114,13 @@
           </div>
         </div>
     
-      </div>
+      </div> -->
 
       <!-- Profile Page -->
       <div data-role="page" id="profile-page">
         <div class="profile-nav">
           <a class="profile-home-btn" href="#landing-page"><i class="fa fa-angle-left"></i> Back to Home</a>
-          <a class="profile-browse-btn" href="#browse-recipes">Continue to Browsing <i class="fa fa-angle-right"></i></a>
+          <a class="profile-browse-btn" href="#recipes-page">Continue to Recipes <i class="fa fa-angle-right"></i></a>
         </div>  
 
         <div class="profile-header">
@@ -164,6 +160,99 @@
             <h5>Food Allergy:</h5> <h5 id="detail-allergy"></h5> <br>
             <h5>Current Health Concern(s):</h5> <h5 id="detail-health-concern"></h5>
           </div>
+        </div>
+      </div>
+
+      <!-- New Recipes Page -->
+      <div data-role="page" id="recipes-page">
+        <!-- Sidebar Navigation -->
+        <div class="sidebar">
+            
+          <div class="profile">
+            <a id="profile-pic" href="#profile-page"><img src="img/profilepic.png"></a>
+          </div>
+            
+          <ul>
+            <li><a href="#landing-page"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="#profile-page"><i class="fa fa-user"></i> Your Profile</a></li>
+
+            <li id="logout-btn"><a href="#login-page"><i class="fa fa-sign-out"></i> Logout</a></li>
+          </ul>
+            
+          <div class="sidebar-btn">
+            <span class="btn"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+          </div>
+        </div>
+
+        <header class="recipe-header">
+          <h1>Recipes</h1>
+        </header>
+
+        <div class="showrecipe-container recipe-box-one">
+          <div class="recipe-description">
+            <a id="recipeone" href="#"><img src="img/placeholder.png"></a>
+
+            <h3>Recipe Title</h3>
+            <p>Description Description Description Description Description Description Description Description </p>
+
+            <a class="view-recipe" href="#">View Recipe <i class="fa fa-angle-double-right"></i></a>
+
+          </div>
+
+        </div>
+
+        <div class="showrecipe-container recipe-box-two">
+          <div class="recipe-description">
+            <a id="recipeone" href="#"><img src="img/placeholder.png"></a>
+    
+            <h3>Recipe Title</h3>
+            <p>Description Description Description Description Description Description Description Description </p>
+
+            <a class="view-recipe" href="#">View Recipe <i class="fa fa-angle-double-right"></i></a>
+    
+          </div>
+            
+        </div>
+
+        <div class="showrecipe-container recipe-box-three">
+          <div class="recipe-description">
+            <a id="recipeone" href="#"><img src="img/placeholder.png"></a>
+        
+            <h3>Recipe Title</h3>
+            <p>Description Description Description Description Description Description Description Description </p>
+
+            <a class="view-recipe" href="#">View Recipe <i class="fa fa-angle-double-right"></i></a>
+        
+          </div>
+            
+        </div>
+
+        <div class="showrecipe-container recipe-box-four">
+          <div class="recipe-description">
+            <a id="recipeone" href="#"><img src="img/placeholder.png"></a>
+            
+            <h3>Recipe Title</h3>
+            <p>Description Description Description Description Description Description Description Description </p>
+
+            <a class="view-recipe" href="#">View Recipe <i class="fa fa-angle-double-right"></i></a>
+            
+          </div>
+                
+        </div>
+
+        <div class="showrecipe-container recipe-box-five">
+          <div class="recipe-description">
+            <a id="recipeone" href="#"><img src="img/placeholder.png"></a>
+            
+            <h3>Recipe Title</h3>
+            <p>Description Description Description Description Description Description Description Description </p>
+
+            <a class="view-recipe" href="#">View Recipe <i class="fa fa-angle-double-right"></i></a>
+            
+          </div>
+                
         </div>
       </div>
 
