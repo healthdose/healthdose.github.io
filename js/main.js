@@ -1,10 +1,18 @@
-//Sidebar menu toggle
 $(document).ready(function() {
-    $('.sidebar-btn').click(function() {
+    //Sidebar menu toggle
+    $('.sidebar-btn').click(function(e) { // opens sidebar when hamburger menu is clicked
+        e.stopPropagation();
         $('.sidebar').toggleClass('visible');
     });
+
+    $('.sidebar').click(function(e) { // prevents closing sidebar when sidebar body is clicked
+        e.stopPropagation();
+    })
+
+    $('body').click(function() { // close sidebar when body is clicked or page is changed
+        $('.sidebar').removeClass('visible');
+    });
     
-    // New
     //Profile form submit
     $('#form-submit-button').click(function(e) {
         e.preventDefault();
@@ -18,13 +26,32 @@ $(document).ready(function() {
           
         $('#profile-name').text(entered_name);
         $('#profile-gender-age').text(gender + " | " + age);
-        $('#welcome-text').text("Weclome, " + entered_name);
+        $('#welcome-text').text("Welcome, " + entered_name);
       
         $('#detail-name').text(entered_name);
         $('#detail-height').text(height);
         $('#detail-weight').text(weight);
         $('#detail-allergy').text(allergy);
         $('#detail-health-concern').text(concern);
+    });
+
+    // Filter recipe cards
+    $('#health-concern-textField').keyup(function() {
+        var filter = $(this).val();
+
+        $('.showrecipe-container').each(function() {
+            if ($(this).attr('title').search(new RegExp(filter, "i")) < 0) {
+                $(this).fadeOut();
+            } else {
+                $(this).show();
+            }
+        });
+    });
+
+    // Make whole recipe card (div) clickable
+    $('.showrecipe-container').click(function() {
+        window.location = $(this).find('.view-recipe').attr('href');
+        return false;
     });
 });
 

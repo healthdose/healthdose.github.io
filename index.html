@@ -9,7 +9,7 @@
         <!-- http://jquerymobile.com/download/ -->
         <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
 
-        <title>Breakfast for aging-related health issues</title>
+        <title>Recipes for aging-related health issues</title>
         <link href="css/style.css" type="text/css" rel="stylesheet"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -45,9 +45,10 @@
               <a id="landing-pic" href="#profile-page"><img src="img/profilepic.png"></a>
             </div>
 
-            <h1 id="welcome-text">Welcome, </h1>
+            <h1 id="welcome-text"></h1>
 
-            <h3><a href="#profile-page">Edit Profile</a></h3>
+            <h3><a href="#profile-page">Create Profile</a></h3>
+            <a href="homepage2.html#landing-page" rel="external"></a> <!--PROFILE PAGE REDESIGN-->
           </div>
         </div>
       </div>
@@ -65,28 +66,33 @@
         
         <div class="profile-content">
           <div class="profile-about">
-            <h2 id="profile-name">First Last</h2>
-            <h4 id="profile-gender-age">Gender | Age</h4>
+            <h2 id="profile-name"></h2>
+            <h4 id="profile-gender-age"></h4>
           </div>
           
           <!-- Form for user to enter information -->
           <div class="profile-form">
-            <Form>
-              <input id="name-textField" type="text" placeholder="Name">
-              <select id="gender-dropdown">
-                <option value="M">M</option>
-                <option value="F">F</option>
-                <option value="Other">Other</option>
-              </select>
-              <input id="age-textField" type="number" placeholder="Age">
-              <input id="height-textField" type="number" placeholder="Height">
-              <input id="weight-textField" type="number" placeholder="Weight">
-              <input id="allergy-textField" type="text" placeholder="Food Allergy ex: Egg, Milk...">
-              <input id="health-concern-textField" type="text" placeholder="Health Concern ex: Diabetes, Heart disease...">
-              <input id="form-submit-button" type="button" value="Submit">
-            </Form>
+            <a href="#popupEdit" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Edit Profile</a>
+            <div class="edit-profile-container" data-role="popup" id="popupEdit">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
+              <Form>
+                <input id="name-textField" type="text" placeholder="Name">
+                <select id="gender-dropdown">
+                  <option value="M">M</option>
+                  <option value="F">F</option>
+                  <option value="Other">Other</option>
+                </select>
+                <input id="age-textField" type="number" placeholder="Age">
+                <input id="height-textField" type="number" placeholder="Height">
+                <input id="weight-textField" type="number" placeholder="Weight">
+                <input id="allergy-textField" type="text" placeholder="Food Allergy ex: Egg, Milk...">
+                <input id="health-concern-textField" type="text" placeholder="Health Concern ex: Diabetes, Heart disease, High Blood Pressure...">
+                <input id="form-submit-button" type="button" value="Submit">
+              </Form>
+            </div>        
           </div>
-          <!-- Edited -->
+          <!-- End -->
+
           <div class="profile-info-container">
             <h3>Profile Details</h3>
 
@@ -127,7 +133,7 @@
         </header>
 
         <!-- Recipe Selections -->
-        <div class="showrecipe-container recipe-box-one">
+        <div class="showrecipe-container recipe-box-one" title="Heart Disease">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/hymb.png"></a>
 
@@ -140,7 +146,7 @@
 
         </div>
 
-        <div class="showrecipe-container recipe-box-two">
+        <div class="showrecipe-container recipe-box-two" title="Heart Disease">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/bfs.png"></a>
     
@@ -153,7 +159,7 @@
             
         </div>
 
-        <div class="showrecipe-container recipe-box-three">
+        <div class="showrecipe-container recipe-box-three" title="Heart Disease">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/bep.png"></a>
         
@@ -166,7 +172,7 @@
             
         </div>
 
-        <div class="showrecipe-container recipe-box-four">
+        <div class="showrecipe-container recipe-box-four" title="Heart Disease">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/gscp.png"></a>
             
@@ -179,7 +185,7 @@
                 
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="Heart Disease">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/gsrc.png"></a>
             
@@ -192,7 +198,7 @@
                 
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="Diabetes">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/hhm.png"></a>
               
@@ -205,7 +211,7 @@
                   
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="Diabetes">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/mbb.png"></a>
               
@@ -218,7 +224,7 @@
                   
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="Diabetes">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/se.png"></a>
                   
@@ -231,7 +237,7 @@
                       
         </div>
   
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="Diabetes">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/sbt.png"></a>
                 
@@ -244,7 +250,7 @@
                     
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="Diabetes">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/re.png"></a>
                   
@@ -257,7 +263,7 @@
                       
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="High Blood Pressure">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/pps.png"></a>
                     
@@ -270,7 +276,7 @@
                         
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="High Blood Pressure">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/bas.png"></a>
                     
@@ -283,7 +289,7 @@
                         
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="High Blood Pressure">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/mgs.png"></a>
                       
@@ -296,7 +302,7 @@
                           
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="High Blood Pressure">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/mgl.png"></a>
                         
@@ -309,7 +315,7 @@
                             
         </div>
 
-        <div class="showrecipe-container recipe-box-five">
+        <div class="showrecipe-container recipe-box-five" title="High Blood Pressure">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/cqb.png"></a>
                           
