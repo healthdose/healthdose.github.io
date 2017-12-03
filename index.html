@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="utf-8">
         <meta name="description" content="New UI design for our web app with less html pages">
         <meta name="author" content="Henry Zhou and Sunyue Lin">
@@ -18,10 +19,11 @@
       <!-- http://demos.jquerymobile.com/1.4.0/pages/ -->
       <!-- Login Page -->
       <div data-role="page" id="login-page">
-        <div role="main" class="ui-content">
+          <div class="login-background">
+
           <div class="login-container">
             <div class="brand-logo">
-              <h1></h1> <!-- app name -->
+              <h1>App Name</h1> <!-- app name -->
             </div>
 
             <div class="login-input">
@@ -34,45 +36,54 @@
             </div>
 
           </div>
-        </div>
+
+          </div>
       </div>
 
       <!-- Landing Page -->
       <div data-role="page" id="landing-page">
-        <div role="main" class="ui-content">
-          <div class="welcome-container">
+        <div class="landing-page-container">
+          <div class="landing-page-header">
+            <h1 id="landing-user-name">App Name</h1>
+          </div>
+          <div class="picture-container">
             <div class="landing-pic-container">
               <a id="landing-pic" href="#profile-page"><img src="img/profilepic.png"></a>
             </div>
-
-            <h1 id="welcome-text"></h1>
-
-            <h3><a href="#profile-page">Create Profile</a></h3>
+            <h4 class="profile-gender-age landing-pga"></h4>
+          </div>
+          <div class="create-container">
+            <!--<h1 id="welcome-text"></h1>-->
+            <h3 class="createBtn"><a id="original-create-btn" href="#profile-page">Create Your Profile</a></h3>
             <a href="homepage2.html#landing-page" rel="external"></a> <!--PROFILE PAGE REDESIGN-->
+            <br>
+            <h3 class="view-recipes-og" id="go-to-recipes"><a href="index.html#recipes-page" rel="external">Go to Recipes</a></h3> <!--PROFILE PAGE REDESIGN-->
           </div>
         </div>
       </div>
 
       <!-- Profile Page -->
       <div data-role="page" id="profile-page">
-        <div class="profile-nav">
+        <div class="profile-page-header">
+         <div class="profile-nav">
           <a class="profile-home-btn" href="#landing-page"><i class="fa fa-angle-left"></i> Back to Home</a>
           <a class="profile-browse-btn" href="#recipes-page">Continue to Recipes <i class="fa fa-angle-right"></i></a>
-        </div>  
+         </div>  
 
-        <div class="profile-header">
+         <div class="profile-header">
           <a id="profile-header-pic" href="#profile-page"><img src="img/profilepic.png"></a>
+         </div>
         </div>
-        
+
         <div class="profile-content">
           <div class="profile-about">
             <h2 id="profile-name"></h2>
-            <h4 id="profile-gender-age"></h4>
+            <h4 class="profile-gender-age"></h4>
           </div>
           
           <!-- Form for user to enter information -->
           <div class="profile-form">
-            <a href="#popupEdit" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Edit Profile</a>
+            <a href="#popupEdit" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" id="profile-edit-btn" data-transition="pop">Create Profile</a>
             <div class="edit-profile-container" data-role="popup" id="popupEdit">
             <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right"></a>
               <Form>
@@ -138,7 +149,7 @@
             <a id="recipeone" href="#"><img src="img/hymb.png"></a>
 
             <h3>Honeyed Yogurt & Mixed Berries & Whole-Grain Waffles</h3>
-            <p>Recipe for Heart Health </p>
+            <p>Heart Healthy Recipe </p>
 
             <a class="view-recipe" href="#hymb-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
 
@@ -151,7 +162,7 @@
             <a id="recipeone" href="#"><img src="img/bfs.png"></a>
     
             <h3>Baked Falafel Sandwiches with Yogurt-Tahini Sauce</h3>
-            <p>Recipe for Heart Health </p>
+            <p>Heart Healthy Recipe </p>
 
             <a class="view-recipe" href="#bfs-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
     
@@ -164,7 +175,7 @@
             <a id="recipeone" href="#"><img src="img/bep.png"></a>
         
             <h3>Black-Eyed Peas and Greens</h3>
-            <p>Recipe for Heart Health </p>
+            <p>Heart Healthy Recipe </p>
 
             <a class="view-recipe" href="#bep-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
         
@@ -177,7 +188,7 @@
             <a id="recipeone" href="#"><img src="img/gscp.png"></a>
             
             <h3>Greek Slaw and Chicken Pitas</h3>
-            <p>Recipe for Heart Health </p>
+            <p>Heart Healthy Recipe </p>
 
             <a class="view-recipe" href="#gscp-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
             
@@ -190,7 +201,7 @@
             <a id="recipeone" href="#"><img src="img/gsrc.png"></a>
             
             <h3>Garlic-Sage Roasted Chicken Caesar Salad</h3>
-            <p>Recipe for Heart Health </p>
+            <p>Heart Healthy Recipe </p>
 
             <a class="view-recipe" href="#gsrc-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
             
@@ -203,7 +214,7 @@
             <a id="recipeone" href="#"><img src="img/hhm.png"></a>
               
             <h3>Half and Half Muffins</h3>
-            <p>Recipe for Diabetes </p>
+            <p>Diabetic Recipe </p>
   
             <a class="view-recipe" href="#hhm-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
               
@@ -216,7 +227,7 @@
             <a id="recipeone" href="#"><img src="img/mbb.png"></a>
               
             <h3>Mexican Breakfast Burrito</h3>
-            <p>Recipe for Diabetes </p>
+            <p>Diabetic Recipe </p>
   
             <a class="view-recipe" href="#mbb-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
               
@@ -229,7 +240,7 @@
             <a id="recipeone" href="#"><img src="img/se.png"></a>
                   
             <h3>BMT Scrambled Eggs</h3>
-            <p>Recipe for Diabetes </p>
+            <p>Diabetic Recipe </p>
       
             <a class="view-recipe" href="#se-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
                   
@@ -242,7 +253,7 @@
             <a id="recipeone" href="#"><img src="img/sbt.png"></a>
                 
             <h3>Southwestern Breakfast Tostadas</h3>
-            <p>Recipe for Diabetes </p>
+            <p>Diabetic Recipe </p>
     
             <a class="view-recipe" href="#sbt-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
                 
@@ -255,7 +266,7 @@
             <a id="recipeone" href="#"><img src="img/re.png"></a>
                   
             <h3>Ranch Eggs</h3>
-            <p>Recipe for Diabetes </p>
+            <p>Diabetic Recipe </p>
       
             <a class="view-recipe" href="#re-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
                   
@@ -268,7 +279,7 @@
             <a id="recipeone" href="#"><img src="img/pps.png"></a>
                     
             <h3>Pumpkin Pie Smoothie</h3>
-            <p>Recipe for High Blood Pressure </p>
+            <p>High Blood Pressure Recipe </p>
         
             <a class="view-recipe" href="#pps-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
                     
@@ -281,7 +292,7 @@
             <a id="recipeone" href="#"><img src="img/bas.png"></a>
                     
             <h3>Berry-Almond Smoothie Bowl</h3>
-            <p>Recipe for High Blood Pressure </p>
+            <p>High Blood Pressure recipe </p>
         
             <a class="view-recipe" href="#bas-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
                     
@@ -294,7 +305,7 @@
             <a id="recipeone" href="#"><img src="img/mgs.png"></a>
                       
             <h3>Mango-Ginger Smoothie</h3>
-            <p>Recipe for High Blood Pressure </p>
+            <p>High Blood Pressure Recipe </p>
           
             <a class="view-recipe" href="#mgs-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
                       
@@ -305,22 +316,22 @@
         <div class="showrecipe-container recipe-box-five" title="High Blood Pressure">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/mgl.png"></a>
-                        
+
             <h3>Mixed Greens with Lentils & Sliced Apple</h3>
-            <p>Recipe for High Blood Pressure </p>
+            <p>High Blood Pressure Recipe </p>
             
             <a class="view-recipe" href="#mgl-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
-                        
+
           </div>
                             
         </div>
 
-        <div class="showrecipe-container recipe-box-five" title="High Blood Pressure">
+        <div class="showrecipe-container recipe-box-last" title="High Blood Pressure">
           <div class="recipe-description">
             <a id="recipeone" href="#"><img src="img/cqb.png"></a>
                           
             <h3>Chickpea & Quinoa Buddha Bowl</h3>
-            <p>Recipe for High Blood Pressure </p>
+            <p>High Blood Pressure Recipe </p>
               
             <a class="view-recipe" href="#cqb-page">View Recipe <i class="fa fa-angle-double-right"></i></a>
                           
@@ -335,7 +346,7 @@
         <a class="back-btn" href="#recipes-page"><i class="fa fa-angle-left"></i></a>
 
         <header class="instruction-header">
-          <h1>Honeyed Yogurt & Mixed Berries & Whole-Grain Waffles</h1>
+          <h1>Honeyed Yogurt & Mixed Berries with Whole-Grain Waffles</h1>
         </header>
 
         <div class="instruction-section">
@@ -364,7 +375,6 @@
             </p>
           </div>
         </div>
-
       </div>
 
       <div data-role="page" id="bfs-page">
