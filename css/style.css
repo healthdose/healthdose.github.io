@@ -166,8 +166,19 @@ html, body {
 }
 
 /* ------------------------------------- LOGIN PAGE ------------------------------------- */
-.login-background {
+.login-page {
+    height: 100%;
+}
 
+.login-background {
+    /* https://static.pexels.com/photos/196643/pexels-photo-196643.jpeg */
+    background: url("https://static.pexels.com/photos/5938/food-salad-healthy-lunch.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 1px;
 }
 
 .login-container {
@@ -187,14 +198,17 @@ html, body {
 .brand-logo h1 {
     text-align: center;
     font-size: 50px;
-    font-family: 'Orbitron', sans-serif;    
+    font-family: 'Orbitron', sans-serif; 
+    color: #fff;   
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .login-input {
     margin-top: 30px;
     padding: 50px 15px 0px 15px;
     border: 1px solid #c0c5ce;
-    box-shadow: 2px 2px 5px #c3c7cc;
+    box-shadow: 10px 10px 50px ;
+    background-color: #fff;
 }
 
 .login-btn {
@@ -362,25 +376,44 @@ html, body {
 .back-btn {
     font-size: 60px;
     margin-left: 30px;
-    color: rgba(97, 83, 83, 0.9) !important;
+    color: #fff !important; /* rgba(97, 83, 83, 0.9) */
     position: absolute;
 }
 
 /* ------------------------------------- RECIPES INSTRUCTIONS PAGE ------------------------------------- */
+.instruction-nav {
+    background-color: #7fe895;
+    height: 85px;
+    border-bottom: 1px solid #c0c5ce;
+    padding-top: 1px;
+}
+
+.instruction-nav h1 {
+    text-align: center;
+    color: #fff;
+}
+
 .instruction-header {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
+    height: 150px;
+    width: 100%;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .instruction-header h1 {
     text-align: center;
+    color: #fff;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 20px;
 }
 
 .instruction-section {
     width: 800px;
     border: 1px solid #c0c5ce;
     margin: auto;
-    margin-top: 20px;
     margin-bottom: 50px;
     padding: 0px 5px 20px 5px;
     box-shadow: 5px 5px 50px; /*#7fe895*/
@@ -390,6 +423,98 @@ html, body {
 .instruction-section h3, p, h4 {
     margin-left: 10px;
 }
+
+/* ------------------------------------- Instructions Page Title Images -----------------------------------*/
+.ins-hymb img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-bfs img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-bep img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-gscp img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-gsrc img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-hhm img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-mbb img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-se img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-sbt img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-re img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-pps img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-bas img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-mgs img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-mgl img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
+.ins-cqb img{
+    height: 180px;
+    width: 100%;
+    position: absolute;
+}
+
 
 /* ------------------------------------- MEDIA QUERIES ------------------------------------- */
 /* Mobile Responsive */
