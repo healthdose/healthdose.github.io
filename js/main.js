@@ -25,6 +25,7 @@ $(document).ready(function() {
         var concern = $('#health-concern-dropdown').val();
         var landing_create_btn = $('#original-create-btn').val();
         var profile_create_btn = $('#profile-edit-btn').val();
+        var concernOutput = $('#health-concern-dropdown').find(':selected').data('value1');
           
         $('#profile-name').text(entered_name);
         $('.profile-gender-age').text(gender + " | " + age);
@@ -35,7 +36,7 @@ $(document).ready(function() {
         $('#detail-height').text(height);
         $('#detail-weight').text(weight);
         $('#detail-allergy').text(allergy);
-        $('#detail-health-concern').text(concern);
+        $('#detail-health-concern').text(concernOutput);
 
         // Change Create Profile to Edit Profile once their profile has been set
         $('#original-create-btn').text('Edit Profile');
