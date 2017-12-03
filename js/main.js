@@ -22,7 +22,7 @@ $(document).ready(function() {
         var height = $('#height-textField').val();
         var weight = $('#weight-textField').val();
         var allergy = $('#allergy-textField').val();
-        var concern = $('#health-concern-textField').val();
+        var concern = $('#health-concern-dropdown').val();
         var landing_create_btn = $('#original-create-btn').val();
         var profile_create_btn = $('#profile-edit-btn').val();
           
@@ -48,7 +48,7 @@ $(document).ready(function() {
         $('.edit-profile-container').fadeIn();
     });
 
-    // Filter recipe cards
+    /*// Filter recipe cards for inputs; health concerns
     $('#health-concern-textField').keyup(function() {
         var filter = $(this).val();
 
@@ -59,6 +59,12 @@ $(document).ready(function() {
                 $(this).show();
             }
         });
+    });*/
+
+    // Filter recipe cards with drop down; health concerns
+    $('#health-concern-dropdown').change(function() {
+        $('.showrecipe-container').hide();
+        $('.' + $(this).val()).show();
     });
 
     // Make whole recipe card (div) clickable
