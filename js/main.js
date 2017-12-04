@@ -75,7 +75,7 @@ $(document).ready(function() {
     });
 
 
-    /*// Click Handler; Registers to google analytics once the button is clicked
+    // Click Handler; Registers to google analytics once the button is clicked
     $("#original-create-btn").click(function() { // click handler for original design; create button
         console.log("Create Profile button clicked original"); // fix smart quote from slide!
         // tracker code here, refer to slide #26 and #27
@@ -102,7 +102,7 @@ $(document).ready(function() {
         // tracker code here, refer to slide #26 and #27
         tracker = ga.getAll()[0];
         tracker.send('event', 'Go to Recipes', 'click');
-    });*/
+    });
 });
 
 //page change
